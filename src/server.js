@@ -42,7 +42,7 @@ app.post("/", async (req, res) => {
     return res.status(201).json(resultado[0]);
   } catch (err) {
     console.log(err);
-    return res.status(401).json({ err });
+    return res.status(401).json({err:'email já cadastrado na base de dados'});
   }
 });
 
